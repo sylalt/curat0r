@@ -125,3 +125,10 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,7vw,104px)}
 .inspiration-layout .inspiration-reference{padding:7px}
 @media(max-width:900px){.archive-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.archive-tile img{height:clamp(175px,30vw,250px)}.object-feature{grid-template-columns:minmax(0,1fr) 130px}}
 @media(max-width:680px){.archive-gallery{gap:10px;margin-top:17px}.archive-tile{padding:5px}.archive-tile img{height:clamp(150px,48vw,230px)}.archive-tile figcaption,.media-feature figcaption,.object-feature figure figcaption,.inspiration-reference figcaption{font-size:8px}.media-feature img{height:220px}.object-feature{grid-template-columns:1fr;gap:12px}.object-feature figure img{height:290px}.object-studies{max-width:340px}.inspiration-reference img{height:185px}}
+
+/* Keep the image-free collage sections balanced with the remaining references. */
+.archive-gallery{margin-top:0}
+.inspiration-layout{display:block}
+.inspiration-layout .influence-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:none;gap:14px}
+.inspiration-layout .influence-card{min-height:205px}
+@media(max-width:680px){.inspiration-layout .influence-grid{grid-template-columns:1fr}.inspiration-layout .influence-card{min-height:190px}}
