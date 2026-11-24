@@ -1,0 +1,9 @@
+{
+  "name": "curator",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "check": "node --check app.js && node --check seed.js",
+    "dev": "node server.cjs"
+  }
+}
