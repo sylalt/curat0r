@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f6f3fa">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#f4ede3">
 <meta name="description" content="A personal archive for the things that catch your eye. Collect images, links, notes and the beginnings of your own point of view.">
 <title>Curator — a collection of you</title>
-<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=4"><link rel="stylesheet" href="baroque-pixel.css?v=1">
+<link rel="icon" href="icon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=4"><link rel="stylesheet" href="baroque-pixel.css?v=2">
 <script src="seed.js?v=3" defer></script><script src="app.js?v=3" defer></script>
 </head>
 <body>
@@ -24,12 +24,12 @@
 <div class="page">
 <header class="topbar"><button id="menu" class="icon-button" aria-label="Toggle navigation">☰</button><div class="breadcrumb">Your space <span>/</span> <b id="breadcrumb">Everything</b></div><div class="top-actions"><span class="private-label">YOUR PERSONAL ARCHIVE</span><button class="primary" id="add-open"><span>+</span> Add something</button></div></header>
 <main>
-<section class="intro"><div><div class="eyebrow">FOLLOW WHAT CATCHES YOUR EYE</div><h1 id="page-title">A collection of <em>you.</em></h1><p id="page-description">Images, ideas, passing obsessions. Keep what moves you.</p></div><div class="intro-mark" aria-hidden="true">✳</div></section>
+<section class="intro"><div><div class="eyebrow">FOLLOW WHAT CATCHES YOUR EYE</div><h1 id="page-title">A collection of <em>you.</em></h1><p id="page-description">Images, ideas, passing obsessions. Keep what moves you.</p></div><div class="intro-mark" aria-hidden="true">✧</div></section>
 <section id="collection-strip" class="collection-strip" aria-label="Explore collections"></section>
 <section id="archive-section">
 <div class="toolbar"><div class="tabs" role="group" aria-label="Filter by type"><button class="selected" data-type="all">All saves</button><button data-type="image">Images</button><button data-type="link">Links</button><button data-type="note">Notes</button><button data-type="quote">Quotes</button></div><div class="tools"><label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Find a little something…" aria-label="Search your archive"></label><select id="sort" aria-label="Sort saves"><option value="new">Newest first</option><option value="old">Oldest first</option><option value="az">Title A–Z</option></select></div></div>
 <div class="results-line"><span id="results-count"></span><span>YOUR TASTE IS ALLOWED TO CHANGE.</span></div>
-<div id="grid" class="masonry"></div><div id="empty" class="empty" hidden><span>✳</span><h2>Room for a new obsession.</h2><p id="empty-description">Save an image, a link, or a thought you don’t want to lose.</p><button class="primary" id="empty-add">Add something</button></div>
+<div id="grid" class="masonry"></div><div id="empty" class="empty" hidden><span>✧</span><h2>Room for a new obsession.</h2><p id="empty-description">Save an image, a link, or a thought you don’t want to lose.</p><button class="primary" id="empty-add">Add something</button></div>
 </section>
 <section id="journal-section" hidden><div class="journal-intro"><span class="eyebrow">A WORK IN PROGRESS</span><h2>Get to know your own eye.</h2><p>Start anywhere. Come back whenever something changes.</p></div><div id="journal-tabs" class="journal-tabs"></div><div id="journal-content"></div><div class="journal-credit">Inspired by the journaling framework shared by @showcasejournals. Prompts adapted for this personal archive.</div></section>
 <footer>Collected with curiosity. <span>Never quite finished.</span></footer>
