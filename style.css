@@ -186,3 +186,8 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,7vw,104px)}
 @media(max-width:900px){.calendar-section{grid-template-columns:minmax(190px,.65fr) minmax(0,1.35fr);gap:30px}.event-card{grid-template-columns:1fr;grid-template-rows:220px auto}.event-art{min-height:220px}.event-info{padding:22px 25px 25px}.event-info .eyebrow{margin-bottom:12px}.event-info h3{margin-top:16px}}
 @media(max-width:680px){.calendar-section{grid-template-columns:1fr;gap:23px;padding:54px 0 62px}.calendar-intro h2{font-size:47px}.calendar-intro>p:last-child{font-size:13px}.event-card{grid-template-columns:minmax(0,1fr) minmax(145px,.92fr);grid-template-rows:250px;min-height:250px}.event-art{min-height:250px}.event-art-detail{width:35%;right:10px;top:12px;border-width:3px}.event-art-label{left:9px;right:9px;bottom:9px;padding:7px;font-size:7px}.event-info{padding:20px 14px}.event-info .eyebrow{font-size:8px;margin-bottom:14px}.event-date{gap:8px}.event-date strong{font-size:56px}.event-day{font-size:8px}.event-month{font-size:9px}.event-info h3{font-size:24px;margin:17px 0 8px}.event-time{font-size:10px}.event-note{font-size:10px;line-height:1.4}.event-rule{margin-top:13px}}
 @media(max-width:390px){.event-card{grid-template-columns:minmax(0,1fr) minmax(132px,.95fr)}.event-date strong{font-size:49px}.event-info h3{font-size:21px}}
+
+/* Curated music grid now has room for the expanded record shelf. */
+.album-gallery{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1000px){.album-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:680px){.album-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
