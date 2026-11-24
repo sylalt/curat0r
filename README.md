@@ -10,7 +10,7 @@ Curator is a small, static portfolio for collecting the images, music, objects a
 
 The site has no JavaScript application, account, browser database, journal, inbox, save controls, or backup integration. Its navigation uses regular in-page links. To add or change content, edit `index.html` and add image files under `assets/`.
 
-The supplied moodboard is presented as the first Visual Archive feature. The six @showcasejournals guide screenshots are no longer used by the portfolio.
+The supplied wide moodboard is the first Visual Archive feature. A second user-provided pin collage appears in Inspirations. The six @showcasejournals guide screenshots are no longer used by the portfolio.
 
 ## Publish
 
