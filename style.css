@@ -180,3 +180,36 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,7vw,104px)}
 .album-gallery{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:1000px){.album-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}}
 @media(max-width:680px){.album-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Event pill and its static outfit inspiration popup. */
+.event-pill{width:100%;appearance:none;font:inherit;text-align:left;cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.event-pill:hover{transform:translateY(-2px);box-shadow:0 14px 28px #36263a16}
+.event-pill:focus-visible{outline:3px solid var(--teal);outline-offset:4px}
+.event-pill-title{display:block;margin:0 0 5px;color:var(--plum);font:500 clamp(23px,3vw,32px)/1.05 var(--serif);letter-spacing:-.02em}
+.event-pill-meta{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;color:#746475;font:12px/1.4 var(--sans)}
+.event-pill-meta strong{font:10px var(--pixel);letter-spacing:.04em;color:#8e5e7b}
+.event-dialog{width:min(840px,calc(100vw - 32px));max-width:none;max-height:min(86vh,800px);margin:auto;padding:0;border:1px solid #b79b6f;border-radius:26px;background:var(--paper-light);color:var(--ink);box-shadow:0 28px 90px #17101d65;overflow:auto}
+.event-dialog::backdrop{background:#21172ccc;backdrop-filter:blur(5px)}
+.event-dialog-inner{position:relative;padding:clamp(22px,4vw,42px)}
+.event-dialog-close{position:absolute;top:17px;right:17px;width:37px;height:37px;border:1px solid #c9b38e;border-radius:50%;background:#f9f2e9;color:var(--plum);font:26px/1 var(--serif);cursor:pointer}
+.event-dialog-close:hover{background:#ead7df}
+.event-dialog-heading{display:grid;grid-template-columns:105px minmax(0,1fr);gap:23px;align-items:center;padding:0 38px 27px 0;border-bottom:1px solid #d8c7b0}
+.event-dialog-date{min-height:112px;display:flex;flex-direction:column;align-items:center;justify-content:center;border:1px solid #c5aa7c;border-radius:20px;background:linear-gradient(150deg,#f7e9e8,#fff9f1);color:#563d58;line-height:1}
+.event-dialog-date span:first-child{font:8px var(--pixel);letter-spacing:.07em;color:#98744c}
+.event-dialog-date strong{margin:5px 0;font:500 48px/.84 var(--serif)}
+.event-dialog-date span:nth-of-type(2){font:8px var(--pixel);letter-spacing:.04em;color:#887587}
+.event-dialog-date b{margin-top:8px;font:9px var(--pixel);color:#8d5f7b}
+.event-dialog-heading h2{max-width:620px;margin:0 0 8px;font:500 clamp(31px,5vw,48px)/.98 var(--serif);letter-spacing:-.03em;color:var(--plum)}
+.event-dialog-venue{margin:0;color:#746475;font-size:13px;line-height:1.5}
+.outfit-inspiration{display:grid;grid-template-columns:minmax(180px,.72fr) minmax(0,1.28fr);gap:25px;align-items:stretch;padding:27px 0 22px}
+.outfit-heading .eyebrow{font-size:9px;margin-bottom:9px}
+.outfit-heading h3{margin:0 0 8px;font:500 30px/.98 var(--serif);color:var(--plum)}
+.outfit-heading>p:last-child{max-width:260px;margin:0;color:#7b6b7e;font-size:12px;line-height:1.55}
+.outfit-gallery{min-height:168px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:minmax(74px,1fr);gap:8px;padding:8px;border:1px solid #d5c2a5;border-radius:18px;background:linear-gradient(135deg,#f3e6e4,#eee6dc)}
+.outfit-gallery figure{margin:0;overflow:hidden;border:1px solid #d0b890;border-radius:12px;background:#fff8ef}
+.outfit-gallery img{display:block;width:100%;height:100%;min-height:74px;object-fit:cover}
+.outfit-gallery figure:nth-child(n+11){display:none}
+.outfit-empty{grid-column:1/-1;align-self:center;justify-self:center;margin:0;padding:14px 18px;border:1px dashed #b89869;border-radius:14px;color:#79677c;text-align:center;font:10px/1.5 var(--pixel);letter-spacing:.02em;background:#fbf7f080}
+.event-dialog-footer{display:flex;justify-content:space-between;margin:0;padding-top:12px;border-top:1px solid #e0d5c5;color:#9a805d;font:8px var(--pixel);letter-spacing:.08em}
+@media(max-width:680px){.event-pill-title{font-size:clamp(18px,5.1vw,24px)}.event-pill-meta{font-size:10px;gap:3px 8px}.event-pill-meta strong{font-size:9px}.event-dialog{width:calc(100vw - 20px);max-height:90vh;border-radius:22px}.event-dialog-inner{padding:22px 17px 16px}.event-dialog-close{top:10px;right:10px;width:33px;height:33px}.event-dialog-heading{grid-template-columns:72px minmax(0,1fr);gap:13px;padding-right:28px;padding-bottom:20px}.event-dialog-date{min-height:100px;border-radius:16px}.event-dialog-date strong{font-size:40px}.event-dialog-heading h2{font-size:clamp(25px,7vw,34px)}.event-dialog-venue{font-size:11px}.outfit-inspiration{grid-template-columns:1fr;gap:15px;padding:20px 0 17px}.outfit-heading h3{font-size:27px}.outfit-gallery{min-height:150px;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:minmax(70px,1fr)}.outfit-gallery img{min-height:70px}}
+@media(prefers-reduced-motion:reduce){.event-pill{transition:none}}

@@ -7,7 +7,7 @@
   <meta name="description" content="A personal taste portfolio of curated film posters, television series, music, objects and visual inspiration.">
   <title>Curator — a taste in progress</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=10">
+  <link rel="stylesheet" href="style.css?v=11">
 </head>
 <body>
   <header class="site-header">
@@ -18,8 +18,6 @@
       <a href="#films">Films</a>
       <a href="#tv-shows">TV Shows</a>
       <a href="#music">Music</a>
-      <a href="#objects">Objects &amp; details</a>
-      <a href="#about">About</a>
     </nav>
     <a class="header-mark" href="#calendar" aria-label="Go to calendar"><span>✦</span></a>
   </header>
@@ -44,16 +42,40 @@
 
     <section class="calendar-section" id="calendar" aria-label="Upcoming event">
       <p class="event-section-label"><span class="pixel-dot"></span> NEXT DATE / 01</p>
-      <article class="event-pill" aria-label="Apresentação do Partido Fazemos, Saturday 28 November 2026 at 16h, Faculdade de Direito da Universidade de Lisboa">
-        <div class="event-pill-date"><span>SÁB</span><strong>28</strong><span>NOV 2026</span></div>
-        <div class="event-pill-copy">
-          <span class="event-pill-kicker">UP NEXT</span>
-          <h2>Apresentação do Partido Fazemos</h2>
-          <p><strong>16H</strong><span>Faculdade de Direito da Universidade de Lisboa</span></p>
-        </div>
+      <button class="event-pill" id="open-event-details" type="button" aria-haspopup="dialog" aria-controls="event-details" aria-label="Open event details and outfit inspiration for Apresentação do Partido Fazemos">
+        <span class="event-pill-date"><span>SÁB</span><strong>28</strong><span>NOV 2026</span></span>
+        <span class="event-pill-copy">
+          <span class="event-pill-kicker">EVENT DETAILS + OUTFIT IDEAS</span>
+          <span class="event-pill-title">Apresentação do Partido Fazemos</span>
+          <span class="event-pill-meta"><strong>16H</strong><span>Faculdade de Direito da Universidade de Lisboa</span></span>
+        </span>
         <span class="event-pill-mark" aria-hidden="true">✧</span>
-      </article>
+      </button>
     </section>
+    <dialog class="event-dialog" id="event-details" aria-labelledby="event-dialog-title">
+      <div class="event-dialog-inner">
+        <button class="event-dialog-close" type="button" aria-label="Close event details">×</button>
+        <p class="eyebrow"><span class="pixel-dot"></span> EVENT NOTES / 01</p>
+        <div class="event-dialog-heading">
+          <div class="event-dialog-date"><span>SÁBADO</span><strong>28</strong><span>NOVEMBRO 2026</span><b>16H</b></div>
+          <div>
+            <h2 id="event-dialog-title">Apresentação do Partido Fazemos</h2>
+            <p class="event-dialog-venue">Faculdade de Direito da Universidade de Lisboa</p>
+          </div>
+        </div>
+        <section class="outfit-inspiration" aria-labelledby="outfit-title">
+          <div class="outfit-heading">
+            <p class="eyebrow">WHAT TO WEAR / UP TO 10 IMAGES</p>
+            <h3 id="outfit-title">Outfit inspiration.</h3>
+            <p>Looks and details to help you get ready for this event.</p>
+          </div>
+          <div class="outfit-gallery" aria-label="Outfit inspiration images">
+            <p class="outfit-empty">Your outfit ideas will appear here.</p>
+          </div>
+        </section>
+        <p class="event-dialog-footer"><span>CURATOR / EVENT 01</span><span>✧</span></p>
+      </div>
+    </dialog>
 
     <section class="section archive-section" id="archive" aria-labelledby="archive-title">
       <div class="section-heading">
@@ -162,5 +184,15 @@
   </main>
 
   <footer class="site-footer"><a class="wordmark" href="#top">curator<span>✦</span></a><span>Collected with curiosity.</span><a href="#top">Back to top ↑</a></footer>
+  <script>
+    const eventDialog = document.getElementById("event-details");
+    const openEventDetails = document.getElementById("open-event-details");
+    const closeEventDetails = eventDialog.querySelector(".event-dialog-close");
+    openEventDetails.addEventListener("click", () => eventDialog.showModal());
+    closeEventDetails.addEventListener("click", () => eventDialog.close());
+    eventDialog.addEventListener("click", (event) => {
+      if (event.target === eventDialog) eventDialog.close();
+    });
+  </script>
 </body>
 </html>
