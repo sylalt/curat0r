@@ -289,9 +289,10 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,7vw,104px)}
 }
 
 /* Bring Objects & details closer to the end of the album shelf. */
-#music.section{padding-bottom:42px}
-#objects.section{padding-top:56px}
+#music.section{padding-bottom:32px}
+#objects.section{padding-top:40px}
+#objects .section-heading{align-self:start}
 @media(max-width:680px){
-  #music.section{padding-bottom:24px}
-  #objects.section{padding-top:32px}
+  #music.section{padding-bottom:18px}
+  #objects.section{padding-top:24px}
 }
