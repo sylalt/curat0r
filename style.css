@@ -226,3 +226,18 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,7vw,104px)}
 .outfit-empty span{max-width:190px}
 @media(max-width:680px){.event-pill{grid-template-columns:64px minmax(0,1fr) 48px}.event-shell-toggle{width:100%;height:auto;aspect-ratio:1}.outfit-empty img{width:72px;height:62px}}
 @media(max-width:390px){.event-pill{grid-template-columns:58px minmax(0,1fr) 40px}}
+
+
+/* Match Film and TV poster sizes and give images more room on mobile. */
+.film-gallery,.tv-gallery{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:1000px){.film-gallery,.tv-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:680px){
+  main{padding-left:16px;padding-right:16px}
+  .archive-gallery,.album-gallery,.film-gallery,.tv-gallery{gap:6px}
+  .poster-gallery{gap:6px}
+  .archive-tile,.album-tile,.poster-tile{padding:3px}
+  .archive-tile figcaption,.album-tile figcaption,.poster-tile figcaption{padding:7px 3px 3px}
+  .poster-tile figcaption{font-size:8.5px}
+  .album-tile img{aspect-ratio:1/1}
+}
+@media(max-width:390px){.archive-gallery,.album-gallery,.film-gallery,.tv-gallery,.poster-gallery{gap:5px}}
