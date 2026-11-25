@@ -304,3 +304,9 @@ main{max-width:1440px;margin:auto;padding:0 clamp(22px,7vw,104px)}
 /* Keep the featured record inside the Music grid at every desktop width. */
 @media(min-width:681px){#music.two-column{grid-template-columns:minmax(0,1fr) minmax(0,290px);column-gap:clamp(24px,4vw,56px);align-items:start}#music .music-featured{grid-column:2;width:100%;max-width:290px;justify-self:end}#music .music-more{grid-column:1/-1;min-width:0}}
 @media(max-width:680px){#music.two-column{grid-template-columns:minmax(0,1fr);gap:22px}#music .music-featured{grid-column:1;width:min(100%,330px);justify-self:start}}
+
+
+/* New pixel-art additions to the visual archive */
+.archive-pixel-tile img{object-fit:contain!important;padding:14px;background:radial-gradient(ellipse at 50% 45%,#fdf8f4 0%,#efe3d3 78%);image-rendering:pixelated}
+.archive-pixel-console img{padding:0;background:#082d2c}
+@media(max-width:680px){.archive-pixel-tile img{padding:8px}}
